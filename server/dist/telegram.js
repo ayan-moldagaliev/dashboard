@@ -8,8 +8,9 @@ const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 const node_telegram_bot_api_1 = __importDefault(require("node-telegram-bot-api"));
+require('dotenv').config();
 // 🔹 Токен Telegram-бота
-const TELEGRAM_BOT_TOKEN = "8468282549:AAFYNxWXoZkr1LFDIr9r25cgFsY3cDzI7LA";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 // 🔹 Список подписчиков (chat_id)
 exports.subscribers = [];
 // ========================
