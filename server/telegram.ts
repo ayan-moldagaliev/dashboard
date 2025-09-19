@@ -2,9 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import TelegramBot from "node-telegram-bot-api";
+require('dotenv').config();
 
 // 🔹 Токен Telegram-бота
-const TELEGRAM_BOT_TOKEN = "8468282549:AAFYNxWXoZkr1LFDIr9r25cgFsY3cDzI7LA";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 
 // 🔹 Список подписчиков (chat_id)
 export const subscribers: number[] = [];
@@ -12,7 +13,7 @@ export const subscribers: number[] = [];
 // ========================
 // Инициализация Telegram бота (long polling)
 // ========================
-const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
+const bot = new TelegramBot(TELEGRAM_BOT_TOKEN!, { polling: true });
 
 // Команда /start
 bot.onText(/\/start/, (msg) => {
