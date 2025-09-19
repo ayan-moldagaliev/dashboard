@@ -189,7 +189,7 @@ const Dashboard: React.FC = () => {
                     >
                         📝 Выгрузка PDF
                     </Button>
-                    <TelegramButton botUsername="DashboardHighLeadsBot" />
+                    <TelegramButton botUsername="DashboardLeadsBot" />
                 </Box>
             </Paper>
         </Box>
